@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            /* 視點 */
+            perspective: 200px;
+            
+            border: 2px solid red;
+            height: 600px;
+            display: flex;
+        }
+
+        .group {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            margin: auto;
+            font-size: 60px;
+            text-align: center;
+            position: relative;
+            /* 定義 .group 的子物件 也要位於 3D 空間 */
+            /* transform-style: preserve-3d; */
+            
+        }
+
+        .group div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            outline: 2px solid green;
+        }
+
+        .front {
+            /* 讓 front 往前移動 50px */
+            /* transform:translateZ(50px); */
+        }
+    </style>
+</head>
+<body>
+    
+<div class="wrap">   <!-- 定義視點 -->
+    <div class="group">
+        <div class="front">F</div>
+        <div class="back">B</div>
+        <div class="top">T</div>
+        <div class="down">D</div>
+        <div class="left">L</div>
+        <div class="right">R</div>
+    </div>
+</div>
+
+</body>
+</html>

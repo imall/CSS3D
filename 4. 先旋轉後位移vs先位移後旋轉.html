@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     <style>
         * {
             padding: 0;
@@ -16,20 +14,37 @@
         .box {
             width: 300px;
             height: 300px;
-            margin:50px auto;
+            margin: 50px auto;
             background-color: #ccc;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* ------------------ */
+        }
 
-            /* transform: translateX(500px); */
-            /* transform: translateY(100px); */
-            transform: perspective(1000px) translateZ(900px);
+        .box1 {
+            transform:
+                perspective(1000px) rotateY(45deg) translateX(100px);
+        }
 
+        .box2 {
+            transform:
+                perspective(1000px) translateX(100px) rotateY(45deg);
         }
     </style>
+</head>
+<body>
+
     <div class="box">
+        原始樣貌
+        <img src="https://picsum.photos/seed/picsum/100/100">
+    </div>
+    <div class="box box1">
+        先旋轉後位移
+        <img src="https://picsum.photos/seed/picsum/100/100">
+    </div>
+    <div class="box box2">
+        先位移後旋轉
         <img src="https://picsum.photos/seed/picsum/100/100">
     </div>
 </body>

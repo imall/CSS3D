@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     <style>
         * {
             padding: 0;
@@ -16,20 +14,24 @@
         .box {
             width: 300px;
             height: 300px;
-            margin:50px auto;
+            margin: 50px auto;
             background-color: #ccc;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* ------------------ */
+        }
 
-            /* transform: translateX(500px); */
-            /* transform: translateY(100px); */
-            transform: perspective(1000px) translateZ(900px);
-
+        .box1 {
+            transform-origin: top center;
+            transform:
+                perspective(1000px) rotateY(45deg);
         }
     </style>
-    <div class="box">
+</head>
+<body>
+
+    <div class="box box1">
         <img src="https://picsum.photos/seed/picsum/100/100">
     </div>
 </body>

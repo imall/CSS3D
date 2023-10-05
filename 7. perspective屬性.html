@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     <style>
         * {
             padding: 0;
@@ -13,24 +11,31 @@
             list-style: none;
         }
 
+        .wrap{
+            /* perspective 在父層當屬性使用 */
+            perspective: 1000px;
+        }
+
         .box {
             width: 300px;
             height: 300px;
-            margin:50px auto;
+            margin: 50px auto;
             background-color: #ccc;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* ------------------ */
 
-            /* transform: translateX(500px); */
-            /* transform: translateY(100px); */
-            transform: perspective(1000px) translateZ(900px);
-
+            transform: translateZ(100px);
         }
     </style>
-    <div class="box">
-        <img src="https://picsum.photos/seed/picsum/100/100">
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <img src="https://picsum.photos/seed/picsum/100/100">
+        </div>
     </div>
+
 </body>
 </html>
