@@ -27,10 +27,7 @@
             font-size: 60px;
             text-align: center;
             position: relative;
-            /* transform-style 定義子物件位於 3D 空間 */
-            /* transform-style: preserve-3d; */
             transform:translateZ(-50px);
-            
         }
 
         .group div {
@@ -41,24 +38,21 @@
             left: 0;
             outline: 2px solid green;
             color: #0003;
-
-            /* 讓物件的背面看不到 */
-            /* backface-visibility: hidden; */
-            
         }
 
 
-        /* .front { transform:rotateY(0deg) translateZ(50px); } */
-        /* .back { transform:rotateY(180deg) translateZ(50px); } */
+        .front { transform:rotateY(0deg) translateZ(50px); }
+        .back { transform:rotateY(180deg) translateZ(50px); }
 
-        /* .top { transform:rotateX(90deg) translateZ(50px); } */
-        /* .down { transform:rotateX(-90deg) translateZ(50px); } */
+        .top { transform:rotateX(90deg) translateZ(50px); }
+        .down { transform:rotateX(-90deg) translateZ(50px); }
 
-        /* .left { transform:rotateY(-90deg) translateZ(50px); } */
-        /* .right { transform:rotateY(90deg) translateZ(50px); } */
+        .left { transform:rotateY(-90deg) translateZ(50px); }
+        .right { transform:rotateY(90deg) translateZ(50px); }
     </style>
 </head>
 <body>
+
     <div class="wrap">
         <div class="group">
             <div class="front">F</div>

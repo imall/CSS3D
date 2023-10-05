@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .perspective {
+            perspective: 1000px;
+            padding: 50px 0;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            transform: translateZ(0px);
+            gap: 150px;
+
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            border: 1px solid purple;
+            text-align: center;
+            line-height: 100px;
+            /* transform: translateZ(100px); */
+        }
+
+        .set-3D {
+            /* transform-style: preserve-3d; */
+        }
+
+        .grandson {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid blue;
+            transform: translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="perspective">
+
+        <div class="set-3D child">
+            child
+        </div>
+
+        <div class="set-3D">
+            <div class="grandson">grandson</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
