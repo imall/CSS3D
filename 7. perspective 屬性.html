@@ -11,7 +11,7 @@
             list-style: none;
         }
 
-        .wrap{
+        .perspective{
             /* perspective 在父層當屬性使用 */
             perspective: 1000px;
         }
@@ -26,12 +26,14 @@
             justify-content: center;
             align-items: center;
 
-            transform: rotateX(45deg);
+            /* transform: rotateX(45deg); */
+            /* transform: rotateY(45deg); */
+            /* transform: translateZ(100px); */
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
+    <div class="perspective">
         <div class="box">
             <img src="https://picsum.photos/seed/picsum/100/100">
         </div>

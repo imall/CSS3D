@@ -11,12 +11,14 @@
             list-style: none;
         }
 
-        .wrap {
+        .perspective {
             /* perspective 在父層當屬性使用 */
-            perspective: 200px;
+            perspective: 1000px;
             border: 2px solid red;
             height: 300px;
             display: flex;
+            /* 定義眼睛要以哪個視角看物件 */
+            perspective-origin: -150px -150px;
         }
 
         .group {
@@ -29,17 +31,19 @@
             position: relative;
             /* transform-style 定義子物件位於 3D 空間 */
             transform-style: preserve-3d;
-            transform:translateZ(-50px) rotateX(0deg) rotateY(0deg);
+
+            /* 旋轉盒子 */
+            transform:translateZ(-50px) rotateX(40deg) rotateY(40deg);
             
         }
 
-        .group div {
+        .group>div{
             width: 100px;
             height: 100px;
             position: absolute;
             top: 0;
             left: 0;
-            outline: 2px solid green;
+            outline: 2px solid lightseagreen;
             color: #0003;
 
             /* 讓物件的背面看不到 */
@@ -61,7 +65,7 @@
 <body>
 
 
-    <div class="wrap">
+    <div class="perspective">
         <div class="group">
             <div class="front">F</div>
             <div class="back">B</div>

@@ -11,9 +11,9 @@
             list-style: none;
         }
 
-        .wrap {
+        .perspective {
             /* perspective 在父層當屬性使用 */
-            perspective: 200px;
+            perspective: 600px;
             border: 2px solid red;
             height: 300px;
             display: flex;
@@ -30,13 +30,13 @@
             transform:translateZ(-50px);
         }
 
-        .group div {
+        .group > div{
             width: 100px;
             height: 100px;
             position: absolute;
             top: 0;
             left: 0;
-            outline: 2px solid green;
+            outline: 2px solid lightseagreen;
             color: #0003;
         }
 
@@ -53,7 +53,7 @@
 </head>
 <body>
 
-    <div class="wrap">
+    <div class="perspective">
         <div class="group">
             <div class="front">F</div>
             <div class="back">B</div>
